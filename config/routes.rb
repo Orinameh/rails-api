@@ -3,4 +3,7 @@ Rails.application.routes.draw do
   resources :todos do
     resources :items
   end
+
+  post 'auth/login', to: 'authentication#authenticated'
+  post 'signup', to: 'users#create'
 end
